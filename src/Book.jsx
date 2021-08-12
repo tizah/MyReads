@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 class Book extends Component {
   render() {
-    const {book, onShelfUpdate, empty} = this.props
-    const noCoverImage = '../img/no_cover_thumb.gif'
+    const {book, onShelfUpdate} = this.props
+    const emptyCoverImage = './images/cover.jfif'
 
     return (
       <li className="book">
@@ -13,7 +13,7 @@ class Book extends Component {
       		className="book-cover"
       		style={{ width: 128,
       				 height: 193,
-      				 backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : noCoverImage})`
+      				 backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : emptyCoverImage})`
 		    }}>
 		  </div>
           <div className="book-shelf-changer">
