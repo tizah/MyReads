@@ -68,15 +68,18 @@ class BookSearch extends React.Component {
                   </div>
                   <div className="search-books-results">
                     <ol className="books-grid">
-                      {empty ? (<div>SEARCH RESULT CAME EMPTY</div>) : books && (books.map((book, index) => (
-              <Book
-                key={index}
-                book={book}
-                empty={empty}
-                onShelfUpdate={this.onShelfUpdate}
-      		  />
-            )))
-            } 
+                      {empty ? (
+                                 <div>SEARCH RESULT CAME EMPTY</div>
+                                ) : books && (
+                                  books.map((book, index) => (
+                                    <Book
+                                      key={index}
+                                      book={book}
+                                      empty={empty}
+                                      onShelfUpdate={this.onShelfUpdate}
+                                    />
+                                  )))
+                      } 
                     </ol>
                   </div>
                 </div>
